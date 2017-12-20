@@ -97,6 +97,27 @@ configure(subprojects - docProjects) { subproject ->
         archives sourcesJar
         archives javadocJar
     }
+    apply plugin: 'maven-publish'
+    publishing {
+        publications {
+            myPublication(MavenPublication) {
+                // telling gradle to publish project's jar archive
+                from components.java
+                artifact (javadocJar) {
+                    classifier = 'javadoc'
+                }
+                artifact (sourcesJar) {
+                    classifier = 'sources'
+                }
+            }
+        }
+        // telling gradle to publish artifact to local directory (3)
+        repositories {
+            maven {
+                url "file:/${rootProject.projectDir}/maven-temp/spring-social-vkontakte"
+            }
+        }
+    }
 }
 
 project('spring-social-vkontakte') {
