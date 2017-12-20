@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.springframework.social</groupId>
+  <artifactId>spring-social-vkontakte</artifactId>
+  <versioning>
+    <release>2.0.0.CUSTOM</release>
+    <versions>
+      <version>2.0.0.CUSTOM</version>
+    </versions>
+    <lastUpdated>20171220180347</lastUpdated>
+  </versioning>
+</metadata>
