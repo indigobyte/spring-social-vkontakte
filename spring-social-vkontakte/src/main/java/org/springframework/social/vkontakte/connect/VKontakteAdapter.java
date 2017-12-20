@@ -79,6 +79,7 @@ public class VKontakteAdapter implements ApiAdapter<VKontakte> {
                     .setFirstName(user.getFirstName())
                     .setLastName(user.getLastName())
                     .setName(user.getFirstName() + " " + user.getLastName())
+                    .setEmail(vkontakte.getEmail())
                     .build();
         } catch (ApiException | ClientException e) {
             log.error("Error while getting current user info.", e);
